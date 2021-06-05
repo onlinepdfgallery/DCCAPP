@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>WT</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+<body>
+
+<!-- Navbar -->
+<!-- <div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="/" class="w3-bar-item w3-button w3-padding-large">Home</a>
+    <a href="/teacher" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Teacher</a>
+    <a href="/student" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Student</a>
+  </div>
+</div> -->
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:26px">
+
+  <!-- The Band Section -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+    <h2 class="w3-wide">Digital Attendence System</h2>
+    <p class="w3-opacity"><i>Welcome</i></p>
+    <!-- <p class="w3-justify">Registration details here</p> -->
+    <img src="https://cdn.pixabay.com/photo/2019/04/14/10/27/book-4126483_960_720.jpg" class="w3-image w3-greyscale-min" style="width:100%">
+    <hr>
+    <p class="w3-opacity"><i>Register Your Accounts Here</i></p>
+    <button class="button button1" onclick="window.location.href='/teacher'">Teacher</button>
+    <button class="button button1" onclick="window.location.href='/student'">Student</button>
+  </div>
+  
+<!-- End Page Content -->
+</div>
+
+<!-- Image of location/map -->
+
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+</body>
+</html>

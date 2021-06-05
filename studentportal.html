@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>WT</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+<style>
+    body {font-family: Arial, Helvetica, sans-serif;}
+    form {border: 3px solid #f1f1f1;}
+    
+    input[type=text], input[type=password] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+    
+    button:hover {
+      opacity: 0.8;
+    }
+    
+    .cancelbtn,.successbtn {
+      width: auto;
+      padding: 10px 18px;
+      background-color: #f44336;
+    }
+
+    .successbtn{
+        background-color: #a8af4c;
+    }
+    
+    .imgcontainer {
+      text-align: center;
+      margin: 24px 0 12px 0;
+    }
+    
+    img.avatar {
+      width: 40%;
+      border-radius: 50%;
+    }
+    
+    .container {
+      padding: 16px;
+    }
+    
+    span.psw {
+      float: right;
+      padding-top: 16px;
+    }
+    
+    
+    /* Change styles for span and cancel button on extra small screens */
+    @media screen and (max-width: 300px) {
+      span.psw {
+         display: block;
+         float: none;
+      }
+      .cancelbtn {
+         width: 100%;
+      }
+    }
+
+    </style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top" >
+  <div class="w3-bar w3-black w3-card" >
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="/" class="w3-bar-item w3-button w3-padding-large" >Digital Attendence Management</a>
+  </div>
+</div>
+
+
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+    <h2 class="w3-wide">Student Portal</h2>
+    <p class="w3-opacity"><i>Welcome</i></p>
+    <form method="POST" action="getattend" >
+        <div class="container">
+          <label for="uname"><b>Enter Key to Mark Your Attendence</b></label>
+          <input type="text" placeholder="Enter Key" name="key" required>
+          <button type="submit" class="cancelbtn">Submit</button>
+        </div>
+    </form>
+
+</div>
+
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+</footer>
+
+<script>
+    function regformfun(){
+        document.getElementById("regform").hidden = false;
+        document.getElementById("logform").hidden = true;
+    };
+    function logformfun(){
+        document.getElementById("regform").hidden = true;
+        document.getElementById("logform").hidden = false;
+    };
+
+</script>
+</body>
+</html>
