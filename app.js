@@ -26,17 +26,17 @@ con.connect(function(err) {
 
 app.get('/',function(req,res){
     res.writeHead(200,{'Content-Type':'text/html'});
-    var readstream=fs.createReadStream(__dirname+'/index.html','utf8');
+    var readstream=fs.createReadStream('./index.html','utf8');
     readstream.pipe(res);
 });
 app.get('/teacher',function(req,res){
     res.writeHead(200,{'Content-Type':'text/html'});
-    var readstream=fs.createReadStream(__dirname+'/teacher.html','utf8');
+    var readstream=fs.createReadStream('./teacher.html','utf8');
     readstream.pipe(res);
 });
 app.get('/student',function(req,res){
     res.writeHead(200,{'Content-Type':'text/html'});
-    var readstream=fs.createReadStream(__dirname+'/student.html','utf8');
+    var readstream=fs.createReadStream('./student.html','utf8');
     readstream.pipe(res);
 });
 app.post('/studentlog', urlencodedParser, function (req, res){
@@ -58,13 +58,13 @@ app.post('/studentlog', urlencodedParser, function (req, res){
         if(flag==1)
     {
         res.writeHead(200,{'Content-Type':'text/html'});
-        var readstream=fs.createReadStream(__dirname+'/studentportal.html','utf8');
+        var readstream=fs.createReadStream('./studentportal.html','utf8');
         readstream.pipe(res);
         //console.log(flag);
     }
     else{
         res.writeHead(200,{'Content-Type':'text/html'});
-        var readstream=fs.createReadStream(__dirname+'/unsuccesss.html','utf8');
+        var readstream=fs.createReadStream('./unsuccesss.html','utf8');
         readstream.pipe(res);
         //console.log(flag);
     }
@@ -91,13 +91,13 @@ app.post('/teacherlog', urlencodedParser, function (req, res){
         if(flag==1)
     {
         res.writeHead(200,{'Content-Type':'text/html'});
-        var readstream=fs.createReadStream(__dirname+'/teacherportal.html','utf8');
+        var readstream=fs.createReadStream('./teacherportal.html','utf8');
         readstream.pipe(res);
         //console.log(flag);
     }
     else{
         res.writeHead(200,{'Content-Type':'text/html'});
-        var readstream=fs.createReadStream(__dirname+'/unsuccesss.html','utf8');
+        var readstream=fs.createReadStream('./unsuccesss.html','utf8');
         readstream.pipe(res);
         //console.log(flag);
     }
@@ -163,7 +163,7 @@ app.post('/sregistration', urlencodedParser, function (req, res){
     srn= req.body.srn;
     psw=req.body.psw;
     res.writeHead(200,{'Content-Type':'text/html'});
-    var readstream=fs.createReadStream(__dirname+'/index.html','utf8');
+    var readstream=fs.createReadStream('./index.html','utf8');
     readstream.pipe(res);
     //console.log(stuname,university,srn,psw);
     var sql =" insert into userdetails (name,university,srn,password) values('"+stuname+"',"+"'"+university+"','"+srn+"','"+psw+"')";
@@ -187,7 +187,7 @@ app.post('/tregistration', urlencodedParser, function (req, res){
         });
     
     res.writeHead(200,{'Content-Type':'text/html'});
-    var readstream=fs.createReadStream(__dirname+'/index.html','utf8');
+    var readstream=fs.createReadStream('./index.html','utf8');
     readstream.pipe(res);
 });
 app.post('/genkey', urlencodedParser, function (req, res){
@@ -202,7 +202,7 @@ app.post('/genkey', urlencodedParser, function (req, res){
     setTimeout(()=>{
                 fs.writeFileSync('OP.html',rr);
                 res.writeHead(200,{'Content-Type':'text/html'});
-                var readstream=fs.createReadStream(__dirname+'/OP.html','utf8');
+                var readstream=fs.createReadStream('./OP.html','utf8');
                 readstream.pipe(res);
                 },1000);
 });
@@ -227,7 +227,7 @@ app.post('/getattend', urlencodedParser, function (req, res){
     setTimeout(()=>{
         fs.writeFileSync('OP.html',rr);
         res.writeHead(200,{'Content-Type':'text/html'});
-        var readstream=fs.createReadStream(__dirname+'/OP.html','utf8');
+        var readstream=fs.createReadStream('./OP.html','utf8');
         readstream.pipe(res);
         },1000);
 });
