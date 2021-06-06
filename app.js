@@ -20,7 +20,7 @@ var con = mysql.createConnection({
 
 con.connect(function(err) {
     if (err) throw err;
-    ////console.log("Connected!");
+    console.log("Connected!");
     });
 
 
@@ -44,7 +44,7 @@ app.post('/studentlog', urlencodedParser, function (req, res){
     uname = req.body.uname;
     stuuser = req.body.uname;
     psw=req.body.psw;
-    var sql =" select password from userdetails where srn='"+uname+"'";
+    var sql =" select password from UserDetails where srn='"+uname+"'";
     con.query(sql, function (err,res,fields) {
         if (err) throw err;
         if(psw===res[0].password)
@@ -77,7 +77,7 @@ app.post('/teacherlog', urlencodedParser, function (req, res){
     user = req.body.uname;
     fs.writeFileSync('teachuser.txt',user);
     psw=req.body.psw;
-    var sql =" select password from userdetails where srn='"+uname+"'";
+    var sql =" select password from UserDetails where srn='"+uname+"'";
     con.query(sql, function (err,res,fields) {
         if (err) throw err;
         if(psw===res[0].password)
@@ -166,7 +166,7 @@ app.post('/sregistration', urlencodedParser, function (req, res){
     var readstream=fs.createReadStream('./index.html','utf8');
     readstream.pipe(res);
     //console.log(stuname,university,srn,psw);
-    var sql =" insert into userdetails (name,university,srn,password) values('"+stuname+"',"+"'"+university+"','"+srn+"','"+psw+"')";
+    var sql =" insert into UserDetails (name,university,srn,password) values('"+stuname+"',"+"'"+university+"','"+srn+"','"+psw+"')";
         //console.log(sql);
         con.query(sql, function (err,res,fields) {
             if (err) throw err;
@@ -179,7 +179,7 @@ app.post('/tregistration', urlencodedParser, function (req, res){
     university= req.body.university;
     srn= req.body.srn;
     psw=req.body.psw;
-    var sql =" insert into userdetails (name,university,srn,password) values('"+tecname+"',"+"'"+university+"','"+srn+"','"+psw+"')";
+    var sql =" insert into UserDetails (name,university,srn,password) values('"+tecname+"',"+"'"+university+"','"+srn+"','"+psw+"')";
         //console.log(sql);
         con.query(sql, function (err,res,fields) {
             if (err) throw err;
