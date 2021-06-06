@@ -4,7 +4,7 @@
   "description": "Digital Attendence Management Syatem",
   "main": "app.js",
   "scripts": {
-    "test": "node app"
+    "start": "node app.js"
   },
   "keywords": [
     "attendence",
