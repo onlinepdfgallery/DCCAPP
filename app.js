@@ -13,9 +13,9 @@ var stuuser;
 var app=express();
 var con = mysql.createConnection({
     host: "remotemysql.com",
-    user: "SFx4n5M5Po",
-    password: "poNyPjWQA6",
-    database: "SFx4n5M5Po"
+    user: "qkrDiWFddw",
+    password: "sihGVooIPe",
+    database: "qkrDiWFddw"
 });
 
 con.connect(function(err) {
